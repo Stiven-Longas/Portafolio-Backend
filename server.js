@@ -7,13 +7,8 @@ const app  = express();
 const PORT = process.env.PORT || 4000;
 
 // Middlewares
-app.use(cors({ 
-  origin: [
-    "http://localhost:5173",
-    "https://stivenlongas.vercel.app",
-    "https://portafolio-react-nine-psi.vercel.app"
-  ]
-}));
+app.use(cors());
+app.options("*", cors());
 app.use(express.json());
 
 // Configurar transporter de Gmail
