@@ -8,7 +8,6 @@ const PORT = process.env.PORT || 4000;
 
 // Middlewares
 app.use(cors());
-app.options("*", cors());
 app.use(express.json());
 
 // Configurar transporter de Gmail
